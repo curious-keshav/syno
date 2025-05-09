@@ -19,7 +19,7 @@ const FooterLinks = [
 const Footer = () => {
     return (
         <footer className="bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-300 transition-colors duration-300 mb-4">
-            <div className="max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-start gap-10 md:gap-16">
+            <div className="max-w-5xl mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-start gap-10 md:gap-16">
                 {/* Logo & Tagline */}
                 <div className="flex flex-col items-start gap-3">
                     <img

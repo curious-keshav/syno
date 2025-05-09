@@ -25,8 +25,8 @@ export default function Navbar() {
     const { theme, toggleTheme } = useTheme();
 
     return (
-        <nav className="w-full h-screen overflow-x-hidden bg-white dark:bg-gray-900 shadow-md z-50 rounded-t-3xl">
-            <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between box-border">
+        <nav className=" w-full z-50  overflow-x-hidden overflow-y-hidden bg-white dark:bg-gray-900 shadow-md  rounded-t-3xl ">
+            <div className="max-w-5xl mx-auto px-4 sm:px-6 flex items-center justify-between box-border">
                 {/* Logo */}
                 <a href="#" className="flex items-center gap-3">
                     <img

@@ -71,8 +71,12 @@ const RotatingCards = ({ autoRotateInterval = 5000 }) => {
     return (
         <section
             id="services"
-            className="relative py-16 px-4 sm:px-6 lg:px-8 bg-gray-100 dark:bg-gray-900 transition-colors duration-300"
+            className="relative py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 transition-colors duration-300"
         >
+
+            <h2 className="text-3xl text-center mb- md:text-4xl font-bold  font-poppins text-white dark:text-white ">
+                Services
+            </h2>
             <div
                 className="relative w-full h-[400px] md:h-[300px] flex items-center justify-center overflow-hidden max-w-6xl mx-auto"
                 ref={containerRef}

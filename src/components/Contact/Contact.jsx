@@ -6,10 +6,10 @@ const Contact = () => {
     return (
         <section
             id="contact"
-            className="relative py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 transition-colors duration-300 mb-4"
+            className="relative py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 transition-colors duration-300 "
         >
-            <div className=" hidden md:block absolute -rotate-90 uppercase top-1/2 left-8  text-5xl font-extrabold tracking-wider text-gray-700 ">Contact Us</div>
-            <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12">
+            <div className=" hidden md:block absolute -rotate-90 uppercase top-1/2 -left-16  text-5xl font-extrabold tracking-wider text-gray-700 ">Contact Us</div>
+            <div className="max-w-5xl mx-auto grid lg:grid-cols-2 gap-12">
 
                 <img alt="contact-us" src={contactUs} className="object-contain" />
 

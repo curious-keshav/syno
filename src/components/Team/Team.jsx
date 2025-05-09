@@ -28,8 +28,8 @@ const teamMembers = [
 const Team = () => {
     return (
         <section className="py-12 px-6  ">
-            <div className="max-w-5xl mx-auto text-center">
-                <h2 className="text-5xl font-extrabold tracking-wider text-white dark:text-white mb-8">
+            <div className=" text-center max-w-5xl mx-auto">
+                <h2 className="text-3xl md:text-4xl font-bold  font-poppins text-white dark:text-white mb-8">
                     Key People
                 </h2>
                 <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-2">
