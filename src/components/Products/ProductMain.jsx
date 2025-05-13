@@ -19,7 +19,6 @@ const ProductMain = () => {
                     <aside className="w-full lg:w-1/4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-8 h-fit rounded-2xl shadow-md">
                         <ProductFilter
                             searchTerm={searchTerm}
-                            setSearchTerm={setSearchTerm}
                             selectedCategory={selectedCategory}
                             setSelectedCategory={setSelectedCategory}
                             sortOrder={sortOrder}
@@ -27,13 +26,14 @@ const ProductMain = () => {
                             priceRange={priceRange}
                             setPriceRange={setPriceRange}
                         />
-                        
+
                     </aside>
-                    
+
 
                     {/* Product Listing */}
                     <main className="w-full lg:w-3/4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-8 rounded-2xl shadow-xl">
                         <ProductListing
+                            setSearchTerm={setSearchTerm}
                             searchTerm={searchTerm}
                             selectedCategory={selectedCategory}
                             sortOrder={sortOrder}

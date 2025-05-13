@@ -10,6 +10,7 @@ import Home from "./components/Home/Home"
 import About from "./components/About/About"
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ProductMain from "./components/Products/ProductMain"
+// import ProductMarquee from "./components/Marquee/ProductMarquee"
 
 function App() {
 
@@ -23,8 +24,9 @@ function App() {
               <PreNavBar />
               <Navbar />
               <Home />
-              <About />
+              {/* <ProductMarquee /> */}
               <RotatingCards />
+              <About />
               <Team />
               <FAQ />
               <Contact />

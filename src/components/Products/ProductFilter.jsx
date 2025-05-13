@@ -3,8 +3,6 @@ import React from 'react';
 const categories = ["Tubelight", "Fan", "AC", "Fridge", "Microwave"];
 
 const ProductFilter = ({
-    searchTerm,
-    setSearchTerm,
     selectedCategory,
     setSelectedCategory,
     sortOrder,
@@ -13,15 +11,7 @@ const ProductFilter = ({
     setPriceRange
 }) => {
     return (
-        <div className="bg-white dark:bg-[#1e1e1e] p-6 rounded-xl shadow-lg space-y-4 border border-gray-200 dark:border-[#333]">
-            <input
-                type="text"
-                placeholder="Search by product name"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full px-4 py-2 border rounded-md bg-gray-50 dark:bg-gray-800 dark:text-white"
-            />
-
+        <div className="  space-y-4 ">
             <div>
                 <label className="block text-sm font-medium text-gray-700 dark:text-white">Category</label>
                 <select

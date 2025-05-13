@@ -32,8 +32,8 @@ const Footer = () => {
                     </p>
                     {/* Accent Lines */}
                     <div className="relative mt-2">
-                        <div className="h-2 w-72 bg-blue-500 rounded-tr-xl"></div>
-                        <div className="h-2 w-96 dark:bg-white bg-gray-800  rounded-tr-xl"></div>
+                        <div className="h-2 w-64 bg-blue-500 rounded-tr-xl"></div>
+                        <div className="h-2 w-80 dark:bg-white bg-gray-800  rounded-tr-xl"></div>
                     </div>
                 </div>
 

@@ -1,9 +1,10 @@
 import React, { useState, useMemo } from 'react';
 import { DUMMY_PRODUCTS } from '../../data/dummyProducts';
+import { FiSearch } from 'react-icons/fi';
 
 const itemsPerPage = 6;
 
-const ProductListing = ({ searchTerm, selectedCategory, sortOrder, priceRange }) => {
+const ProductListing = ({ searchTerm, selectedCategory, sortOrder, priceRange, setSearchTerm }) => {
     const [currentPage, setCurrentPage] = useState(1);
     const [selectedProduct, setSelectedProduct] = useState(null);
 
@@ -64,6 +65,23 @@ const ProductListing = ({ searchTerm, selectedCategory, sortOrder, priceRange })
             )}
 
             {/* Grid */}
+
+            <div className="relative w-full !z-0 pb-4">
+                <FiSearch className="absolute left-3 top-6 transform -translate-y-1/2 text-gray-500 text-lg" />
+                <input
+                    type="text"
+                    placeholder="Search properties..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className={`w-full p-3 pl-10 border rounded-lg shadow-md focus:outline-none transition-all duration-300 
+            bg-white dark:bg-[#1e1e1e] text-gray-900 dark:text-white 
+            border-gray-300 dark:border-gray-600 
+            placeholder-gray-500 dark:placeholder-gray-400 
+            focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400`}
+                />
+            </div>
+
+
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 {paginatedItems.map((product) => (
                     <div

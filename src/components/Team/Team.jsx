@@ -1,4 +1,7 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
+import { motion } from 'framer-motion';
+
 
 const teamMembers = [
     {
@@ -27,49 +30,63 @@ const teamMembers = [
 
 const Team = () => {
     return (
-        <section className="py-12 px-6  ">
-            <div className=" text-center max-w-5xl mx-auto">
-                <h2 className="text-3xl md:text-4xl font-bold  font-poppins text-white dark:text-white mb-8">
+        <section className="py-16 px-6 ">
+            <div className="max-w-5xl px-4 sm:px-6 mx-auto text-center">
+                <h2 className=" text-4xl sm:text-5xl font-bold text-white mb-14">
                     Key People
                 </h2>
-                <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-2">
-                    {teamMembers.map((member) => (
-                        <div
+
+                <div className="grid gap-12 sm:grid-cols-2 md:grid-cols-2">
+                    {teamMembers.map((member, index) => (
+                        <motion.div
                             key={member.name}
-                            className="bg-white dark:bg-[#111827] rounded-lg shadow-lg p-6 flex flex-col items-center text-center transition-transform transform hover:scale-105"
+                            initial={{ opacity: 0, y: 40 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6, delay: index * 0.2 }}
+                            viewport={{ once: true }}
+                            className="bg-white dark:bg-[#111827] rounded-xl shadow-md hover:shadow-lg p-8 flex flex-col items-center text-center transform transition-transform duration-300 hover:scale-[1.03]"
                         >
                             <img
                                 src={member.image}
                                 alt={member.name}
-                                className="w-32 h-32 rounded-full object-cover mb-4 border-4 border-primary"
+                                className="w-32 h-32 rounded-full object-cover mb-4 border-4 border-blue-600"
                             />
-                            <h3 className="text-xl font-semibold text-gray-800 dark:text-white">
+                            <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
                                 {member.name}
                             </h3>
-                            <p className="text-gray-500 dark:text-gray-300">{member.position}</p>
-                            <p className="text-gray-400 dark:text-gray-500 mt-2">{member.bio}</p>
-                            <div className="mt-4">
-                                <p className="font-semibold text-gray-800 dark:text-white">Expertise:</p>
-                                <ul className="text-gray-500 dark:text-gray-300">
+                            <p className="text-blue-600 font-medium">{member.position}</p>
+                            <p className="text-gray-600 dark:text-gray-400 mt-3 text-sm">{member.bio}</p>
+
+                            <div className="mt-5">
+                                <p className="font-semibold text-gray-900 dark:text-white">Expertise:</p>
+                                <ul className="mt-1 text-sm text-gray-700 dark:text-gray-300 space-y-1">
                                     {member.expertise.map((skill) => (
-                                        <li key={skill} className="text-sm">{skill}</li>
+                                        <li key={skill}>• {skill}</li>
                                     ))}
                                 </ul>
                             </div>
-                            <div className="flex gap-4 mt-4">
-                                <a href={member.socialLinks.linkedin} className="text-xl text-primary hover:text-gray-700">
+
+                            <div className="flex gap-5 mt-6">
+                                <a
+                                    href={member.socialLinks.linkedin}
+                                    className="text-xl text-blue-600 hover:text-blue-800 transition-colors"
+                                    target="_blank" rel="noopener noreferrer"
+                                >
                                     <i className="fab fa-linkedin"></i>
                                 </a>
-                                <a href={member.socialLinks.twitter} className="text-xl text-primary hover:text-gray-700">
+                                <a
+                                    href={member.socialLinks.twitter}
+                                    className="text-xl text-blue-600 hover:text-blue-800 transition-colors"
+                                    target="_blank" rel="noopener noreferrer"
+                                >
                                     <i className="fab fa-twitter"></i>
                                 </a>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </div>
         </section>
     );
 };
-
 export default Team;

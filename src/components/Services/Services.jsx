@@ -71,14 +71,13 @@ const RotatingCards = ({ autoRotateInterval = 5000 }) => {
     return (
         <section
             id="services"
-            className="relative py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 transition-colors duration-300"
+            className="relative py-16 px-4 sm:px-6 lg:px-8 transition-colors duration-300"
         >
-
-            <h2 className="text-3xl text-center mb- md:text-4xl font-bold  font-poppins text-white dark:text-white ">
+            <h1 className="text-4xl text-center sm:text-5xl font-bold mb-4">
                 Services
-            </h2>
+            </h1>
             <div
-                className="relative w-full h-[400px] md:h-[300px] flex items-center justify-center overflow-hidden max-w-6xl mx-auto"
+                className="relative w-full h-[400px] md:h-[300px] flex items-center justify-center overflow-hidden max-w-5xl mx-auto"
                 ref={containerRef}
                 onMouseEnter={stopAutoRotate}
                 onMouseLeave={startAutoRotate}
@@ -87,14 +86,14 @@ const RotatingCards = ({ autoRotateInterval = 5000 }) => {
                 <button
                     onClick={handlePrevious}
                     aria-label="Previous card"
-                    className="absolute left-4 z-30 bg-white/90 dark:bg-gray-700 dark:text-white hover:bg-white dark:hover:bg-gray-600 p-2 rounded-full shadow-md text-xl"
+                    className="absolute left-4 z-30 bg-white/90 dark:bg-gray-700 dark:text-white hover:bg-white dark:hover:bg-gray-600 p-2 rounded-full shadow-md text-xl transition-all duration-300"
                 >
                     ◀
                 </button>
                 <button
                     onClick={handleNext}
                     aria-label="Next card"
-                    className="absolute right-4 z-30 bg-white/90 dark:bg-gray-700 dark:text-white hover:bg-white dark:hover:bg-gray-600 p-2 rounded-full shadow-md text-xl"
+                    className="absolute right-4 z-30 bg-white/90 dark:bg-gray-700 dark:text-white hover:bg-white dark:hover:bg-gray-600 p-2 rounded-full shadow-md text-xl transition-all duration-300"
                 >
                     ▶
                 </button>
@@ -141,7 +140,6 @@ const RotatingCards = ({ autoRotateInterval = 5000 }) => {
                             </div>
                         </div>
                     );
-
                 })}
             </div>
         </section>
